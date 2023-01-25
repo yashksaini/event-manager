@@ -5,3 +5,26 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+:root {
+  --white: #fff;
+  --light: #f8f8f8;
+  --black: #20242f;
+  --line: #d6d6d6;
+}
+.box {
+  height: min(100px, 100%);
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+}
+.box:hover {
+  cursor: pointer;
+  background-color: var(--light);
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  justify-content: center;
+  width: min(700px, 100%);
+  margin: 24px auto;
+}
