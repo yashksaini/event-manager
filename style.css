@@ -18,36 +18,6 @@
 body {
   background-color: var(--white);
 }
-.box {
-  height: min(100px, 100%);
-  aspect-ratio: 1;
-  border: 1px solid var(--line);
-  padding: 8px;
-  color: var(--grey);
-}
-.box:hover {
-  cursor: pointer;
-}
-.week {
-  background-color: var(--green);
-  color: var(--light);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.week:hover {
-  cursor: pointer;
-  background-color: var(--green);
-}
-
-.today {
-  background-color: var(--today);
-  color: var(--light);
-}
-.today:hover {
-  cursor: pointer;
-  background-color: var(--today);
-}
 .container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -56,6 +26,40 @@ body {
   width: min(700px, 100%);
   margin: 0 auto;
   padding: 0 16px;
+  font-size: 20px;
+}
+.box {
+  height: min(100px, 100%);
+  aspect-ratio: 1;
+  padding: 8px;
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  cursor: pointer;
+}
+.week {
+  font-weight: 500;
+  color: var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.today {
+  position: relative;
+}
+.today::after {
+  content: "";
+  height: 12px;
+  aspect-ratio: 1;
+  position: absolute;
+  bottom: 0px;
+  left: calc(50% - 6px);
+  background-color: var(--green);
+  border-radius: 50%;
 }
 
 .row {
@@ -75,7 +79,7 @@ body {
 .btn {
   width: 50px;
   aspect-ratio: 1;
-  border: 1px solid var(--line);
+  border: none;
   background-color: var(--white);
   border-radius: 50%;
   color: var(--black);
