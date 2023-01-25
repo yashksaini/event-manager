@@ -8,17 +8,45 @@
 :root {
   --white: #fff;
   --light: #f8f8f8;
-  --black: #20242f;
+  --black: #282828;
   --line: #d6d6d6;
+  --grey: #8a8a8a;
+  --blue: #1992e6;
+  --today: #505050;
+  --green: #0eaa50;
+}
+body {
+  background-color: var(--white);
 }
 .box {
   height: min(100px, 100%);
   aspect-ratio: 1;
   border: 1px solid var(--line);
+  padding: 8px;
+  color: var(--grey);
 }
 .box:hover {
   cursor: pointer;
-  background-color: var(--light);
+}
+.week {
+  background-color: var(--green);
+  color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.week:hover {
+  cursor: pointer;
+  background-color: var(--green);
+}
+
+.today {
+  background-color: var(--today);
+  color: var(--light);
+}
+.today:hover {
+  cursor: pointer;
+  background-color: var(--today);
 }
 .container {
   display: grid;
@@ -26,5 +54,58 @@
   align-items: center;
   justify-content: center;
   width: min(700px, 100%);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.row {
   margin: 24px auto;
+  width: min(100%, 700px);
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+.col span {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--blue);
+}
+.btn {
+  width: 50px;
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  background-color: var(--white);
+  border-radius: 50%;
+  color: var(--black);
+  display: inlin-flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn span:nth-child(2) {
+  padding-left: 50px;
+}
+.btn span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.hide {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 536px) {
+  .container {
+    font-size: 12px;
+  }
+  .btn {
+    font-size: 12px;
+    width: 36px;
+  }
 }
