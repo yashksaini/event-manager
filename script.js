@@ -42,7 +42,7 @@ const drawCalendar = () => {
       ) {
         calendar.innerHTML += `<div class="box today">${date}</div>`;
       } else {
-        calendar.innerHTML += `<div class="box">${date}</div>`;
+        calendar.innerHTML += `<div class="box ">${date}</div>`;
       }
     } else {
       calendar.innerHTML += `<div class="box hide"></div>`;
